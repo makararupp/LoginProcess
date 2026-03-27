@@ -1,4 +1,4 @@
-package com.amk.bank.amk.config;
+package com.amk.bank.amk.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -24,6 +24,7 @@ public class SecurityConfig {
         // Config Http Mapping URL
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/login").permitAll()
+                .requestMatchers("/hello").permitAll()
                 .requestMatchers("/admin/**").hasRole("ADMIN")
                 .requestMatchers("/user/**").hasRole("USER")
                 .anyRequest().authenticated()

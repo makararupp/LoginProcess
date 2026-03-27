@@ -1,4 +1,4 @@
-package com.amk.bank.amk.config;
+package com.amk.bank.amk.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
