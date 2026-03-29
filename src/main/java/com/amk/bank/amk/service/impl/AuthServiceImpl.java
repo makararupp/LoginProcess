@@ -27,7 +27,7 @@ public class AuthServiceImpl implements AuthService {
 			UserDetails userDetails = inMemoryUserDetailsManager.loadUserByUsername(loginDto.getUser());
 			LoginResponse response;
 			if (passwordEncoder.matches(loginDto.getPassword(), userDetails.getPassword())) {
-				response = LoginResponse.builder().status(LoginResponse.SUCCESS).message("Login Sucessfully.").build();
+				response = LoginResponse.builder().status(LoginResponse.SUCCESS).message("Login Successfully.").build();
 				log.info("Login response:{}", response);
 				return response;
 			} else {
